@@ -110,7 +110,7 @@ def get_turns(  # pylint: disable=too-many-return-statements
                 first_role, first_msg = self.messages[0]
                 if first_role == self.roles[0]:
                     system_prompt = self.system_template.format(
-                        system_message=" " + self.system_message
+                        system_message = self.system_message
                     )
                     system_prompt += first_msg
                     self.messages.pop(0)
